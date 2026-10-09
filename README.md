@@ -19,6 +19,10 @@ Accurate Channel State Information (CSI) is crucial for coherent signal detectio
    - **Stage 2 (FiLM Adaptation)**: Freezing the spatial-temporal transformer backbone and tuning lightweight affine generators over 50 epochs.
 3. **High Mobility & Mismatch Resilience**: Achieves over +10.12 dB gain at extreme Doppler spreads (1000 Hz) compared to standard convolution-transformer baselines, while adding only 3,200 trainable parameters (<1.1% overhead).
 
+<p align="center">
+  <img src="images/architecture.png" alt="FortiTranM-FiLM Architecture" width="800">
+</p>
+
 ---
 
 ## Directory Structure
