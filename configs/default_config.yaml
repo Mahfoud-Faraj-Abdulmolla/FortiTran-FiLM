@@ -1,0 +1,36 @@
+# ==============================================================================
+# FortiTranM-FiLM Configuration File
+# Author: Mahfoud Faraj Abdulmolla
+# ==============================================================================
+
+channel:
+  carrier_frequency_hz: 3.5e+9      # 3.5 GHz (5G NR Mid-band)
+  subcarrier_spacing_hz: 30000.0    # 30 kHz numerology (mu=1)
+  num_subcarriers: 612              # 51 Resource Blocks (RBs) * 12
+  num_symbols: 14                   # 1 5G NR slot (14 OFDM symbols)
+  pilot_density: 0.1666666667       # DM-RS Configuration Type 1 (1/6 subcarriers)
+  profile: "TDL-A"                  # Non-Line-of-Sight (NLOS) 3GPP TR 38.901
+  rms_delay_spread_ns: 150.0        # Baseline RMS Delay Spread
+  max_doppler_hz: 200.0             # Baseline Doppler Spread
+
+training:
+  stage1:
+    epochs: 1000
+    early_stopping_patience: 25
+    learning_rate: 0.0005
+    batch_size: 64
+    weight_decay: 0.00001
+  stage2_film_transfer:
+    epochs: 50
+    freeze_backbone: true
+    learning_rate: 0.0001
+    batch_size: 64
+    weight_decay: 0.00001
+
+model:
+  in_channels: 2
+  out_channels: 2
+  embed_dim: 128
+  num_heads: 4
+  num_layers: 4
+  film_hidden_dim: 64

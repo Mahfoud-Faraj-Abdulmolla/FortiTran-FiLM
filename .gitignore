@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch Checkpoints and Saved Models (Do not upload large binary weights)
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+weights/
+
+# Datasets and raw data (Do not upload large channel tensors)
+*.mat
+*.npy
+*.npz
+*.h5
+*.hdf5
+data/
+raw_data/
+dataset/
+
+# MATLAB temporary logs
+*.asv
+*.m~
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
